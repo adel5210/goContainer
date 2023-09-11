@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/adel5210/goContainer/service/customer"
+	"github.com/adel5210/goContainer/service/docker"
 	"github.com/adel5210/goContainer/util/filereader"
 )
 
@@ -12,5 +12,5 @@ func main() {
 	fmt.Println(dockerYML["MSSQL"].Port)
 	fmt.Println(dockerYML["MSSQL"].Env)
 
-	customer.CreateContainer(dockerYML["MSSQL"].Name, dockerYML["MSSQL"].Port)
+	docker.CreateContainer(dockerYML["MSSQL"].Name, dockerYML["MSSQL"].Port)
 }

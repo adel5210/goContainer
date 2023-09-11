@@ -1,4 +1,4 @@
-package dockercontainer
+package docker
 
 type DockerContainer struct {
 	data map[string]DockerParam
