@@ -1,0 +1,6 @@
+MSSQL:
+  name: mcr.microsoft.com/mssql/server:2019-latest
+  port: 1433:1433
+  env:
+    MSSQL_SA_PASSWORD: TestContainer19
+    ACCEPT_EULA: Y
