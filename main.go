@@ -8,9 +8,13 @@ import (
 
 func main() {
 	dockerYML := filereader.ReadDockerYML("docker-container.yml")
-	fmt.Println(dockerYML["MSSQL"].Name)
-	fmt.Println(dockerYML["MSSQL"].Port)
-	fmt.Println(dockerYML["MSSQL"].Env)
 
-	docker.CreateContainer(dockerYML["MSSQL"].Name, dockerYML["MSSQL"].Port)
+	for k := range dockerYML {
+		fmt.Println(dockerYML[k].Name)
+		fmt.Println(dockerYML[k].Port)
+		fmt.Println(dockerYML[k].Env)
+
+		docker.CreateContainer(dockerYML[k].Name, dockerYML[k].Port)
+	}
+
 }
