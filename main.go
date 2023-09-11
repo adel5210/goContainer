@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/adel5210/goContainer/service/docker"
-	"github.com/adel5210/goContainer/util/filereader"
+	"github.com/adel5210/goContainer/services/docker"
+	"github.com/adel5210/goContainer/utils/filereader"
 )
 
 func main() {

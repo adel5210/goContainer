@@ -1,7 +1,7 @@
 package filereader
 
 import (
-	"github.com/adel5210/goContainer/model/docker"
+	"github.com/adel5210/goContainer/models/docker"
 	"gopkg.in/yaml.v3"
 	"io/ioutil"
 	"log"

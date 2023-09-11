@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "./someclient";
+
+message ClientRequest{
+  optional string name = 1;
+  optional string address = 2;
+}
+
+message ClientResponse{
+  optional string message = 1;
+}
+
+service ClientService{
+  rpc SomeClientFunction(ClientRequest) returns (ClientResponse);
+}
