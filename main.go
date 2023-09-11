@@ -14,7 +14,7 @@ func main() {
 		fmt.Println(dockerYML[k].Port)
 		fmt.Println(dockerYML[k].Env)
 
-		docker.CreateContainer(dockerYML[k].Name, dockerYML[k].Port)
+		docker.CreateContainer(dockerYML[k].Name, dockerYML[k].Port, dockerYML[k].Env)
 	}
 
 }

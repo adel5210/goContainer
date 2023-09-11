@@ -9,11 +9,12 @@ import (
 /**
  * https://golang.testcontainers.org/quickstart/
  */
-func CreateContainer(imgName, port string) {
+func CreateContainer(imgName string, port string, env map[string]string) {
 	ctx := context.Background()
 	req := testcontainers.ContainerRequest{
 		Image:        imgName,
 		ExposedPorts: []string{port},
+		Env:          env,
 		//WaitingFor: wait.ForLog(""),
 	}
 	_, err := testcontainers.GenericContainer(ctx, testcontainers.GenericContainerRequest{
